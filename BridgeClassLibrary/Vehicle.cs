@@ -43,8 +43,8 @@ namespace BridgeClassLibrary
         /// <summary>
         /// A constructor that takes two parameters licenseplate and date
         /// </summary>
-        /// <param name="licenseplate"></param>
-        /// <param name="date"></param>
+        /// <param name="licenseplate">registrering nummer</param>
+        /// <param name="date">Dato da man krydsede broen</param>
         protected Vehicle(string licenseplate, DateTime date, bool broBizz = false)
         {
             Licenseplate = licenseplate;
@@ -59,13 +59,13 @@ namespace BridgeClassLibrary
         /// <summary>
         /// Abstract method that returns the price of for crossing the bridge
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retuner standard pris</returns>
         public abstract double Price(); //Price without discount
 
         /// <summary>
         /// New method DiscountPrice that returns the price with 10% discount if BroBizz is true.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retuner prisen med brobizz rabat</returns>
         public double DiscountPrice()
         {
             double price = Price();
@@ -75,7 +75,7 @@ namespace BridgeClassLibrary
         /// <summary>
         /// Abstract method that returns the type of vehicle
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retuner køretøj type</returns>
         public abstract string VehicleType();
 
 

@@ -16,8 +16,10 @@ namespace BridgeClassLibrary
         /// <summary>
         /// Car constructor that takes two parameters licenseplate and date from the base class Vehicle
         /// </summary>
-        /// <param name="licenseplate"></param>
-        /// <param name="date"></param>
+        /// <param name="licenseplate">Registrerings nummer</param>
+        /// <param name="date">Dato for krydsning af broen</param>
+        /// <param name="broBizz">Hvis man bruger brobizz</param>
+
         public Car (string licenseplate, DateTime date, bool broBizz = false) : base(licenseplate, date, broBizz)
         {
         }
@@ -27,7 +29,7 @@ namespace BridgeClassLibrary
         /// <summary>
         /// A override method that returns the price of for crossing the bridge
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retuner standard pris for bil</returns>
         public override double Price()
         {
             return 230;
@@ -36,7 +38,7 @@ namespace BridgeClassLibrary
         /// <summary>
         /// a override method that returns the type of vehicle
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retuner køretæjs typen Bil</returns>
         public override string VehicleType()
         {
             return "Car";
