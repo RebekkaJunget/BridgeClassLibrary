@@ -9,53 +9,35 @@ namespace BridgeClassLibrary
 
 
     /// <summary>
-    /// Class Car with properties Licenseplate and date 
+    /// Class Car that inherits from the Vehicle class
     /// </summary>
-    public class Car
+    public class Car : Vehicle
     {
         /// <summary>
-        /// properties Licenseplate 
-        /// </summary>
-        public string Licenseplate { get; set; }
-
-        /// <summary>
-        /// properties date 
-        /// </summary>
-
-        public DateTime date { get; set; }
-
-        /// <summary>
-        /// A constructor that takes two parameters licenseplate and date
+        /// Car constructor that takes two parameters licenseplate and date from the base class Vehicle
         /// </summary>
         /// <param name="licenseplate"></param>
         /// <param name="date"></param>
-        public Car(string licenseplate, DateTime date)
+        public Car (string licenseplate, DateTime date) : base(licenseplate, date)
         {
-            Licenseplate = licenseplate;
-            this.date = date;
         }
-
-        /// <summary>
-        /// a default constructor
-        /// </summary>
         public Car()
         {
         }
-
         /// <summary>
-        /// A method that returns the price of for crossing the bridge
+        /// A override method that returns the price of for crossing the bridge
         /// </summary>
         /// <returns></returns>
-        public double Price()
+        public override double Price()
         {
             return 230;
         }
 
         /// <summary>
-        /// a method that returns the type of vehicle
+        /// a override method that returns the type of vehicle
         /// </summary>
         /// <returns></returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }
