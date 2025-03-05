@@ -38,17 +38,17 @@ namespace BridgeClassLibrary
         public bool BroBizz { get; set; } //New property BroBizz to indicate if the vehicle uses a BroBizz
 
 
-        public DateTime date { get; protected set; }
+        public DateTime Date { get; protected set; }
 
         /// <summary>
         /// A constructor that takes two parameters licenseplate and date
         /// </summary>
         /// <param name="licenseplate"></param>
         /// <param name="date"></param>
-        protected Vehicle(string licenseplate, DateTime date, bool broBizz)
+        protected Vehicle(string licenseplate, DateTime date, bool broBizz = false)
         {
             Licenseplate = licenseplate;
-            this.date = date;
+            Date = date;
             BroBizz = broBizz;
         }
 
