@@ -18,7 +18,7 @@ namespace BridgeClassLibrary
         /// </summary>
         /// <param name="licenseplate"></param>
         /// <param name="date"></param>
-        public Car (string licenseplate, DateTime date) : base(licenseplate, date)
+        public Car (string licenseplate, DateTime date, bool broBizz = false) : base(licenseplate, date, broBizz)
         {
         }
         public Car()
