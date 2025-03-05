@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeClassLibrary", "BridgeClassLibrary\BridgeClassLibrary.csproj", "{BFD8AD4C-073C-449B-8FAC-BE94976BACBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMethodTests", "CarMethodTests\CarMethodTests.csproj", "{E9403E3B-73EF-41CA-803F-E177DF2C45CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BFD8AD4C-073C-449B-8FAC-BE94976BACBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFD8AD4C-073C-449B-8FAC-BE94976BACBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFD8AD4C-073C-449B-8FAC-BE94976BACBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9403E3B-73EF-41CA-803F-E177DF2C45CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9403E3B-73EF-41CA-803F-E177DF2C45CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9403E3B-73EF-41CA-803F-E177DF2C45CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9403E3B-73EF-41CA-803F-E177DF2C45CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
