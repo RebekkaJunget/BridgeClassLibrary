@@ -21,7 +21,7 @@ namespace BridgeClassLibrary
         /// </summary>
         public string Licenseplate
         {
-            get => _licenseplate; 
+            get => _licenseplate;
             protected set
             {
                 /// <summary>
@@ -35,6 +35,8 @@ namespace BridgeClassLibrary
             }
         }
 
+        public bool BroBizz { get; set; } //New property BroBizz to indicate if the vehicle uses a BroBizz
+
 
         public DateTime date { get; protected set; }
 
@@ -43,10 +45,11 @@ namespace BridgeClassLibrary
         /// </summary>
         /// <param name="licenseplate"></param>
         /// <param name="date"></param>
-        protected Vehicle(string licenseplate, DateTime date)
+        protected Vehicle(string licenseplate, DateTime date, bool broBizz)
         {
             Licenseplate = licenseplate;
             this.date = date;
+            BroBizz = broBizz;
         }
 
         protected Vehicle()
@@ -57,7 +60,17 @@ namespace BridgeClassLibrary
         /// Abstract method that returns the price of for crossing the bridge
         /// </summary>
         /// <returns></returns>
-        public abstract double Price();
+        public abstract double Price(); //Price without discount
+
+        /// <summary>
+        /// New method DiscountPrice that returns the price with 10% discount if BroBizz is true.
+        /// </summary>
+        /// <returns></returns>
+        public double DiscountPrice()
+        {
+            double price = Price();
+            return BroBizz ? price * 0.9 : price; //If BroBizz is true, the price will be 10% less
+        }
 
         /// <summary>
         /// Abstract method that returns the type of vehicle
