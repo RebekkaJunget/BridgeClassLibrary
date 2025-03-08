@@ -10,7 +10,7 @@ namespace StoreBaeltTicketLibrary
 {
     public class StoreBaeltCar : Car
     {
-        public StoreBaeltCar(string licensePlate, DateTime date) : base(licensePlate, date)
+        public StoreBaeltCar(string licensePlate, DateTime date, bool broBizz = false) : base(licensePlate, date, broBizz)
         {
         }
 

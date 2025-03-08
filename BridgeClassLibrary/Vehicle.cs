@@ -35,7 +35,7 @@ namespace BridgeClassLibrary
             }
         }
 
-        public bool BroBizz { get; set; } //New property BroBizz to indicate if the vehicle uses a BroBizz
+        public bool BroBizz { get; protected set; } //New property BroBizz to indicate if the vehicle uses a BroBizz
 
 
         public DateTime Date { get; protected set; }
