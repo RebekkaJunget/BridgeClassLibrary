@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCMethodTests", "MCMethodTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTests", "VehicleTests\VehicleTests.csproj", "{ED3E8358-C901-44E9-8DB9-15BE1F878D1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreBaeltTicketLibrary", "StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj", "{AECEE799-2A6B-474E-B321-C543D2A174A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{ED3E8358-C901-44E9-8DB9-15BE1F878D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED3E8358-C901-44E9-8DB9-15BE1F878D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED3E8358-C901-44E9-8DB9-15BE1F878D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECEE799-2A6B-474E-B321-C543D2A174A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECEE799-2A6B-474E-B321-C543D2A174A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECEE799-2A6B-474E-B321-C543D2A174A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECEE799-2A6B-474E-B321-C543D2A174A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
