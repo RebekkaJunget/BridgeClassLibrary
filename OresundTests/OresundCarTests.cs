@@ -22,6 +22,19 @@ namespace Oresundbroen.Tests
             Assert.AreEqual(460, actual, 0.01);
         }
 
+        [TestMethod]
+        public void OresundCar_WithBroBizz_ShouldReturnDiscountedPrice()
+        {
+            // Arrange
+            OresundCar car = new OresundCar("123ABC", new DateTime(2024, 3, 5), true);
+
+            // Act
+            double actual = car.Price();
+
+            // Assert
+            Assert.AreEqual(178, actual, 0.01);
+        }
+
         [TestMethod()]
 
         public void OresundCar_VehicleType_ShouldReturnCorrectString()
