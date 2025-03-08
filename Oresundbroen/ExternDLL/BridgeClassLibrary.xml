@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BridgeClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:BridgeClassLibrary.Car">
+            <summary>
+            Class Car that inherits from the Vehicle class
+            </summary>
+        </member>
+        <member name="M:BridgeClassLibrary.Car.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Car constructor that takes two parameters licenseplate and date from the base class Vehicle
+            </summary>
+            <param name="licenseplate">Registrerings nummer</param>
+            <param name="date">Dato for krydsning af broen</param>
+            <param name="broBizz">Hvis man bruger brobizz</param>
+        </member>
+        <member name="M:BridgeClassLibrary.Car.Price">
+            <summary>
+            A override method that returns the price of for crossing the bridge
+            </summary>
+            <returns>Retuner standard pris for bil</returns>
+        </member>
+        <member name="M:BridgeClassLibrary.Car.VehicleType">
+            <summary>
+            a override method that returns the type of vehicle
+            </summary>
+            <returns>Retuner køretæjs typen Bil</returns>
+        </member>
+        <member name="T:BridgeClassLibrary.MC">
+            <summary>
+            Class MC inherits from the Vehicle class
+            </summary>
+        </member>
+        <member name="M:BridgeClassLibrary.MC.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            constructor that takes two parameters licenseplate and date from the base class Vehicle
+            </summary>
+            <param name="licenseplate">registrerings nummer</param>
+            <param name="date">Dato for krydsning af broen</param>
+            <param name="broBizz">Hvis der er en brobizz</param>
+        </member>
+        <member name="M:BridgeClassLibrary.MC.Price">
+            <summary>
+            method that returns the price of for crossing the bridge
+            </summary>
+            <returns>Retuner standard prisen for MC</returns>
+        </member>
+        <member name="M:BridgeClassLibrary.MC.VehicleType">
+            <summary>
+            method that returns the type of vehicle
+            </summary>
+            <returns>Retuner køretøjs typen MC</returns>
+        </member>
+        <member name="T:BridgeClassLibrary.Vehicle">
+            <summary>
+            Abstract class Vehicle with properties Licenseplate and date. Also a base class for vehicles
+            </summary>
+        </member>
+        <member name="F:BridgeClassLibrary.Vehicle._licenseplate">
+            <summary>
+            protcted set because we want to be able to set the licenseplate in the constructor
+            </summary>
+        </member>
+        <member name="P:BridgeClassLibrary.Vehicle.Licenseplate">
+            <summary>
+            Property Licenseplate that has a private set and a protected get so that it can be accessed in the derived classes
+            </summary>
+        </member>
+        <member name="M:BridgeClassLibrary.Vehicle.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            A constructor that takes two parameters licenseplate and date
+            </summary>
+            <param name="licenseplate">registrering nummer</param>
+            <param name="date">Dato da man krydsede broen</param>
+        </member>
+        <member name="M:BridgeClassLibrary.Vehicle.Price">
+            <summary>
+            Abstract method that returns the price of for crossing the bridge
+            </summary>
+            <returns>Retuner standard pris</returns>
+        </member>
+        <member name="M:BridgeClassLibrary.Vehicle.DiscountPrice">
+            <summary>
+            New method DiscountPrice that returns the price with 10% discount if BroBizz is true.
+            </summary>
+            <returns>Retuner prisen med brobizz rabat</returns>
+        </member>
+        <member name="M:BridgeClassLibrary.Vehicle.VehicleType">
+            <summary>
+            Abstract method that returns the type of vehicle
+            </summary>
+            <returns>Retuner køretøj type</returns>
+        </member>
+    </members>
+</doc>
