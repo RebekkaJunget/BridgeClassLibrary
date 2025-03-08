@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Oresundbroen
 {
-    internal class OresundMC : Vehicle
+    public class OresundMC : Vehicle
     {
         public OresundMC(string licensePlate, DateTime date, bool broBizz = false) : base(licensePlate, date, broBizz)
         {
