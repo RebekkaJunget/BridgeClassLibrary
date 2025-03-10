@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\StoreBaeltTicketLibrary.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,6 +36,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BridgeClassLibrary\bin\Debug\BridgeClassLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="StoreBaeltTicketLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\StoreBaeltTicketLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IStoreBaeltRepository.cs" />
     <Compile Include="StoreBaeltCar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreBaeltRepository.cs" />

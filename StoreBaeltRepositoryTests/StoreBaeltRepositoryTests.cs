@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace StoreBaeltTicketLibrary.Tests
 {
     [TestClass()]
@@ -48,15 +49,29 @@ namespace StoreBaeltTicketLibrary.Tests
             //Act
             List<Vehicle> result = storeBaeltRepository.GetTicketByLicensePlate("XCK4321"); //Get all tickets with license plate 'XCK4321'
             List<Vehicle> result2 = storeBaeltRepository.GetTicketByLicensePlate("ABC4567"); //Get all tickets with license plate 'ABC4567'
-            
+
 
             //Assert
             Assert.AreEqual("XCK4321", result[0].Licenseplate);//Check that the tickets have the correct license plate
             Assert.AreEqual(2, result2.Count); //Check that the method returns 2 tickets
             Assert.AreEqual("ABC4567", result2[0].Licenseplate);
             Assert.AreEqual("ABC4567", result2[1].Licenseplate);
-            
+
 
         }
+        [TestMethod]
+        public void Interface_Implementation_Test()
+        {
+            // Arrange
+            IStoreBaeltRepository repository = new StoreBaeltRepository();
+
+            // Act
+            repository.AddTicket(new StoreBaeltCar("1234567", System.DateTime.Now));
+            List<Vehicle> tickets = repository.GetAllTickets();
+
+            // Assert
+            Assert.AreEqual(1, tickets.Count); // Ensure the repository works
+        }
+
     }
 }

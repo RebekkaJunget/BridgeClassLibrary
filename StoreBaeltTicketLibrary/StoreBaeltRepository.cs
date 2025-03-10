@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StoreBaeltTicketLibrary
 {
-    public class StoreBaeltRepository
+    public class StoreBaeltRepository : IStoreBaeltRepository
     {
         private List<Vehicle> _tickets = new List<Vehicle>();
 
