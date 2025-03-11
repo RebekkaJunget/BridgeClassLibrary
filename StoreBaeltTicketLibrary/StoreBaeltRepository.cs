@@ -9,7 +9,7 @@ namespace StoreBaeltTicketLibrary
 {
     public class StoreBaeltRepository : IStoreBaeltRepository
     {
-        private List<Vehicle> _tickets = new List<Vehicle>();
+        private static List<Vehicle> _tickets = new List<Vehicle>();
 
         /// <summary>
         /// Adds a new ticket(car) to the repository
