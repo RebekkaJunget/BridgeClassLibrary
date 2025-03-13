@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Text.Json;
+using TCPServerConsoleApp.Server;
+
 namespace TCPServerConsoleApp
 {
     internal class Program
@@ -7,8 +10,8 @@ namespace TCPServerConsoleApp
         private static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            Server server = new Server();
-            server.Start();
+            JsonServer jserver = new JsonServer();
+            jserver.start();
             Console.Read();
         }
     }

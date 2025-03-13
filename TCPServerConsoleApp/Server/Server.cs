@@ -9,7 +9,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TCPServerConsoleApp
+namespace TCPServerConsoleApp.Server
 {
     internal class Server
     {
@@ -35,10 +35,12 @@ namespace TCPServerConsoleApp
             {
                 TcpClient socket = server.AcceptTcpClient();
 
-                Task.Run(() => {
-                TcpClient tempSocket = socket;
-                HandleClient(socket); });
-               
+                Task.Run(() =>
+                {
+                    TcpClient tempSocket = socket;
+                    HandleClient(socket);
+                });
+
             }
         }
 
@@ -57,14 +59,14 @@ namespace TCPServerConsoleApp
                 try
                 {
                     string command = reader.ReadLine();
-                    
+
                     Console.WriteLine($"1: Client request: {command}");
 
                     if (command == null)
                     {
                         return;
                     }
-                    if (command.ToUpper()== "RANDOM" || command.ToUpper() == "ADD" || command.ToUpper() == "SUB")
+                    if (command.ToUpper() == "RANDOM" || command.ToUpper() == "ADD" || command.ToUpper() == "SUB")
                     {
                         writer.WriteLine("2: Input Numbers");
 
@@ -89,7 +91,7 @@ namespace TCPServerConsoleApp
                                 case "SUB":
                                     result = num1 - num2;
                                     break;
-                               
+
                             }
                             writer.WriteLine($"4: Result: {result}");
                             Console.WriteLine($"4: Sent result: {result}");
@@ -97,16 +99,16 @@ namespace TCPServerConsoleApp
                         else
                         {
                             writer.WriteLine("Invalid numbers");
-                           
+
                         }
-                       
+
                     }
                     else
                     {
                         writer.WriteLine("Invalid command");
-                       
+
                     }
-                    
+
                 }
                 catch (Exception e)
                 {
